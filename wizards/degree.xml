@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record model="ir.ui.view" id="wzrd_degree_form_id">
+        <field name="name">Wizard Degree</field>
+        <field name="model">wzrd_degree</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="fld_degree"/>
+                </group>
+                <footer>
+                    <button name="fnc_degree" type="object" string="OK" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="wzrd_degree_action_id"
+                name="Wizard Degree"
+                binding_model="mdl_persones"
+                res_model="wzrd_degree"
+                view_mode="form"
+                target="new"/>
+</odoo>

@@ -1,0 +1,115 @@
+<odoo>
+	<data>
+        <record    id="pprfrmt_id"    model="report.paperformat">
+            <field  name="name">Any String</field>
+            <field  name="format">A4</field>
+            <field  name="orientation">Portrait</field>
+            <field  name="margin_top">7</field>
+            <field  name="margin_bottom">0</field>
+            <field  name="margin_left">0</field>
+            <field  name="margin_right">0</field>
+            <field  name="dpi">90</field>
+        </record>
+
+		<record id="action_id"      model="ir.actions.report">
+			<field name="name">Print Cards</field>
+			<field name="model">mdl_persones</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">mudl_hamasat.tmplt_id</field>
+			<field name="report_file">mudl_hamasat.tmplt_id</field>
+			<field name="print_report_name">'File Name'</field>
+			<field name="binding_model_id"  ref="mudl_hamasat.model_mdl_persones"/>
+			<field name="binding_type">report</field>
+            <field name="paperformat_id"       ref="pprfrmt_id"/>
+		</record>
+<!--ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc-->
+        <template    id = "tmplt_id2">
+            <table align="center" valign="center" style="border-collapse:separate; border-radius:8pt; margin:1cm">
+                <tr>
+                    <td align="center" valign="center" style="width:11cm; height:6.2cm;border: 2pt solid black; border-collapse:separate; border-radius:8pt">
+                        <img t-if="xImg" t-att-src="image_data_uri(xImg)" style="height:6.2cm;width:11cm; border-radius:8pt"/>
+                    </td>
+                    <td align="center" valign="center" style="width:2cm; height:6.2cm"></td>
+                    <td align="center" valign="center" style="width:11cm; height:6.2cm;border: 2pt solid black; border-collapse:separate; border-radius:8pt">
+                        <img t-if="xImgB" t-att-src="image_data_uri(xImgB)" style="height:6.2cm;width:11cm; border-radius:8pt"/>
+                    </td>
+                </tr>
+            </table>
+        </template>
+
+        <template    id = "tmplt_id3">
+            <table align="center" valign="center" style=" border-collapse:separate; border-radius:8pt; margin:1cm">
+                <tr>
+                    <td align="center" valign="center" style="width:11cm; height:6.2cm;border: 2pt solid white; border-collapse:separate; border-radius:8pt">
+                        <img t-if="xImgB" t-att-src="image_data_uri(xImgB)" style="height:6.2cm;width:11cm; border-radius:8pt"/>
+                    </td>
+                    <td align="center" valign="center" style="width:2cm; height:6.2cm"></td>
+                    <td align="center" valign="center" style="width:11cm; height:6.2cm;border: 2pt solid white; border-collapse:separate; border-radius:8pt">
+                        <img t-if="xImgB" t-att-src="image_data_uri(xImgB)" style="height:6.2cm;width:11cm; border-radius:8pt"/>
+                    </td>
+                </tr>
+            </table>
+        </template>
+
+        <template    id = "tmplt_id4">
+            <table align="center" valign="center" style="border-collapse:separate; border-radius:8pt; margin:1cm">
+                <tr>
+                    <td align="center" valign="center" style="width:11cm; height:6.2cm;border: 2pt solid black; border-collapse:separate; border-radius:8pt">
+                        <img t-if="xImgB" t-att-src="image_data_uri(xImgB)" style="height:6.2cm;width:11cm; border-radius:8pt"/>
+                    </td>
+                    <td align="center" valign="center" style="width:2cm; height:6.2cm"></td>
+                    <td align="center" valign="center" style="width:11cm; height:6.2cm;border: 2pt solid black; border-collapse:separate; border-radius:8pt">
+                        <img t-if="xImg" t-att-src="image_data_uri(xImg)" style="height:6.2cm;width:11cm; border-radius:8pt"/>
+                    </td>
+                </tr>
+            </table>
+        </template>
+<!--cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc-->
+		<template id="tmplt_id">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <t    t-set = "xEmp"      t-value = "0"/>
+                    <t    t-set = "xBB"      t-value = "False"/>
+                    <t    t-set = "xTen"      t-value = "0"/>
+                    <t    t-set = "xImg"      t-value = "''"/>
+                    <t    t-set = "xImgB"      t-value = "''"/>
+
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-set = "xTen"   t-value = "xTen+1"/>
+                <!--______________________________________________________-->
+                        <t t-if ="xTen in [1,3,5,7,9]" >
+                            <t t-set = "xImg" t-value = "doc.fld_card_front"/>
+                            <t t-if ="doc_index+1 &lt; len(docs)"> <t t-set = "xImgB" t-value = "docs[doc_index+1].fld_card_front"/> </t>
+                            <t t-call="mudl_hamasat.tmplt_id2"/>
+                            <t t-set = "xImgB"  t-value = "''"/>
+                        </t>
+                <!--________________________________________________________-->
+                        <t t-if ="doc_index+1 == len(docs)">
+                            <t t-if ="xTen &lt; 9">
+                                <t t-set = "xEmp"  t-value = "(10-xTen)/2"/>
+                                <t t-foreach="int(xEmp)" t-as="C"> <t t-call="mudl_hamasat.tmplt_id3"/> </t>
+                            </t>
+                        </t>
+                <!--__________________________________________________-->
+                        <t t-if ="xTen == 10"> <t t-set = "xBB"  t-value = "True"/> </t>
+                        <t t-elif ="doc_index+1 == len(docs)"> <t t-set = "xBB"  t-value = "True"/> </t>
+                        <t t-if ="xBB == True">
+                            <t t-foreach="xTen+1" t-as="B">
+                                <t t-if ="B in [1,3,5,7,9]" >
+                                    <t t-set = "xImg" t-value = "docs[doc_index-xTen+B].fld_card_back"/>
+                                    <t t-if ="B &lt; xTen"> <t t-set = "xImgB" t-value = "docs[doc_index-xTen+1+B].fld_card_back"/> </t>
+                                    <t t-call="mudl_hamasat.tmplt_id4"/>
+                                    <t t-set = "xImgB"  t-value = "''"/>
+                                </t>
+                            </t>
+                            <t t-set = "xBB"  t-value = "False"/>
+                            <t t-set = "xTen"  t-value = "0"/>
+                        </t>
+                    <!--_______________________________________________________-->
+                    </t>
+                </div>
+            </t>
+        </template>
+
+	</data>
+</odoo>

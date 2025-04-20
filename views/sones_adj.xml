@@ -1,0 +1,40 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="sones_adj_list_id">
+      <field name="name">sones_adj_List</field>
+      <field name="model">mdl_sones_adj</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="fld_sonum"/>
+            <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sones_adj_form_id">
+		<field name="name">sones_adj_Form</field>
+		<field name="model">mdl_sones_adj</field>
+		<field name="arch" type="xml">
+			<form>
+                <group>
+                    <field name="name"/>
+                </group>
+			</form>
+		</field>
+	</record>
+
+    <record model="ir.actions.act_window" id="sones_adj_action_id">
+      <field name="name">Sones_Adj_Action</field>
+      <field name="res_model">mdl_sones_adj</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Adjectives" id="sones_adj_menu_root_id"/>
+    <menuitem name="Adjectives" id="sones_adj_menu_id" parent="sones_adj_menu_root_id"/>
+    <menuitem name="All Adjectives" id="sones_adj_menu_id2" parent="sones_adj_menu_id" action="sones_adj_action_id"/>
+
+
+  </data>
+</odoo>

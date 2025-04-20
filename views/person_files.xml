@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="person_files_form_id">
+		<field name="name">Persons Files</field>
+		<field name="model">mdl_person_files</field>
+		<field name="arch" type="xml">
+			<form>
+                <group>
+                    <field name="fld_file" filename='name'/>
+                    <field name="name" invisible="1"/>
+                </group>
+			</form>
+		</field>
+	</record>
+
+  </data>
+</odoo>

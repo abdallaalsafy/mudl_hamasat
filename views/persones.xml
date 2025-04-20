@@ -1,0 +1,195 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="parents_search_id">
+            <field name="name">Search_Parents</field>
+            <field name="model">mdl_persones</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" filter_domain="['|',('name','ilike',self),('fld_notes','ilike',self),('fld_houseband','ilike',self),('fld_persone_id','ilike',self)]"/>
+                    <field name="fld_address"/>
+                    <field name="fld_code_nation"/>
+                    <field name="fld_phones"/>
+<!--                    <filter name="fltr_parents"   string="Parents"    domain="[('fld_persone_id','=', False)]"/>-->
+<!--                    <filter name="fltr_sons"   string="Sones"    domain="[('fld_persone_id','!=', False)]"/>-->
+<!--                    <filter name="fltr_archive"   string="Archive"    domain="[('active','=', False)]"/>-->
+                </search>
+            </field>
+      </record>
+
+    <record model="ir.ui.view" id="persones_list_id">
+      <field name="name">Persones_List</field>
+      <field name="model">mdl_persones</field>
+      <field name="arch" type="xml">
+        <tree  class="class_name" decoration-bf="1" decoration-success="fld_selected==True" decoration-it="fld_persone_id!=False">
+            <field name="fld_sonum"/>
+            <field name="fld_card_front"/>
+            <field name="name"/>
+            <field name="fld_code_nation"/>
+            <field name="fld_birth"/>
+            <field name="fld_age"/>
+            <field name="fld_gender"/>
+            <field name="fld_phones"/>
+            <field name="fld_zones_id"/>
+            <field name="fld_address"/>
+            <field name="fld_health"/>
+            <field name="fld_health_info"/>
+            <field name="fld_social"/>
+            <field name="fld_degree"/>
+            <field name="fld_sones"/>
+            <field name="fld_sones_ids" string="Recorded Sones"/>
+            <field name="fld_notes"/>
+            <field name="fld_persone_id"/>
+            <field name="fld_houseband"/>
+            <field name="fld_selected" invisible="1"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="persones_form_id">
+		<field name="name">Persones_Form</field>
+		<field name="model">mdl_persones</field>
+		<field name="arch" type="xml">
+			<form>
+                <field name='fld_image' widget="image" class="oe_avatar"/>
+                <div class="oe_title">
+                    <h1><field name="name"/></h1>
+                    <h3><field name="fld_code_nation" attrs="{'required': [('fld_persone_id', '=', False)]}"/></h3>
+                </div>
+                <group>
+                    <field name="fld_persone_id"/>
+                    <field name="fld_adj_id" attrs="{'invisible': [('fld_persone_id', '=', False)]}"/>
+                    <field name="fld_phones"/>
+                    <field name="fld_zones_id"/>
+                    <field name="fld_address"/>
+                    <field name="fld_health"/>
+                    <field name="fld_health_info"/>
+                    <field name="fld_social"/>
+                    <field name="fld_degree"/>
+                    <field name="fld_sones"/>
+                    <field name="fld_notes"/>
+                    <field name="fld_card_front" filename='fld_card_name_front'/>
+                    <field name="fld_card_name_front" invisible="1"/>
+                    <field name="fld_card_back" filename='fld_card_name_back'/>
+                    <field name="fld_card_name_back" invisible="1"/>
+                    <field name="fld_files_ids"/>
+                    <field name="fld_sones_ids" attrs="{'invisible': [('fld_persone_id', '>', 0)]}" >
+                        <tree>
+                            <field name="name"/>
+                            <field name="fld_code_nation"/>
+                            <field name="fld_adj_id"/>
+                            <field name="fld_health"/>
+                            <field name="fld_health_info"/>
+                        </tree>
+                       <form>
+                            <field name='fld_image' widget="image" class="oe_avatar"/>
+                            <group class="oe_title">
+                                <field name="name"/>
+                                <field name="fld_code_nation"/>
+                            </group>
+                           <group>
+                               <field name="fld_adj_id"/>
+                               <field name="fld_phones"/>
+                                <field name="fld_health"/>
+                                <field name="fld_health_info"/>
+                                <field name="fld_social"/>
+                                <field name="fld_notes"/>
+                                <field name="fld_card_front" filename='fld_card_name_front'/>
+                                <field name="fld_card_name_front" invisible="1"/>
+                                <field name="fld_card_back" filename='fld_card_name_back'/>
+                                <field name="fld_card_name_back" invisible="1"/>
+                               <field name="fld_files_ids"/>
+                           </group>
+                        </form>
+                </field>
+                </group>
+
+			</form>
+		</field>
+	</record>
+
+    <record model="ir.actions.server" id="persones_action_server_id">
+        <field name="name">Select</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id"    ref="model_mdl_persones"/>
+        <field name="binding_model_id"    ref="model_mdl_persones"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">records.chk_fld()</field>
+    </record>
+    <record model="ir.actions.server" id="persones_action_server_id2">
+            <field name="name">UnSelect</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id"    ref="model_mdl_persones"/>
+            <field name="binding_model_id"    ref="model_mdl_persones"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">records.un_chk_fld()</field>
+        </record>
+<!--........................................................................-->
+
+    <record model="ir.actions.act_window" id="strong_parents_action_id">
+        <field name="name">Strong Parents</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('fld_persone_id','=', False), ('fld_degree','=', 'a')]</field>
+    </record>
+    <record model="ir.actions.act_window" id="medium_parents_action_id">
+        <field name="name">Medium Parents</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('fld_persone_id','=', False), ('fld_degree','=', 'b')]</field>
+    </record>
+    <record model="ir.actions.act_window" id="low_parents_action_id">
+        <field name="name">Low Parents</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('fld_persone_id','=', False), ('fld_degree','=', 'c')]</field>
+    </record>
+    <record model="ir.actions.act_window" id="no_degree_parents_action_id">
+        <field name="name">No Degree Parents</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('fld_persone_id','=', False), ('fld_degree','=', False)]</field>
+    </record>
+    <record model="ir.actions.act_window" id="all_parents_action_id">
+      <field name="name">All Parents</field>
+      <field name="res_model">mdl_persones</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('fld_persone_id','=', False)]</field>
+    </record>
+    <record model="ir.actions.act_window" id="archive_parents_action_id">
+        <field name="name">Archive Parents</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('fld_persone_id','=', False), ('active','=', False)]</field>
+    </record>
+    <record model="ir.actions.act_window" id="all_sones_action_id">
+        <field name="name">All Sones</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('fld_persone_id','!=', False)]</field>
+    </record>
+    <record model="ir.actions.act_window" id="all_persones_action_id">
+        <field name="name">All Persones</field>
+        <field name="res_model">mdl_persones</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!--........................................................................-->
+
+    <menuitem name="Persones" id="persones_menu_root_id"/>
+
+    <menuitem name="Parents" id="parents_menu_id" parent="persones_menu_root_id"/>
+    <menuitem name="All Parents" id="all_parents_menu_id" parent="parents_menu_id" action="all_parents_action_id"/>
+    <menuitem name="Strong Parents" id="strong_parents_menu_id" parent="parents_menu_id" action="strong_parents_action_id"/>
+    <menuitem name="Medium Parents" id="medium_parents_menu_id2" parent="parents_menu_id" action="medium_parents_action_id"/>
+    <menuitem name="Low Parents" id="low_parents_menu_id" parent="parents_menu_id" action="low_parents_action_id"/>
+    <menuitem name="No Degree Parents" id="no_degree_parents_menu_id" parent="parents_menu_id" action="no_degree_parents_action_id"/>
+    <menuitem name="Archive Parents" id="archive_parents_menu_id" parent="parents_menu_id" action="archive_parents_action_id"/>
+
+    <menuitem name="Others" id="others_menu_id" parent="persones_menu_root_id"/>
+    <menuitem name="All Sones" id="all_sones_menu_id" parent="others_menu_id" action="all_sones_action_id"/>
+    <menuitem name="All Persones" id="all_persones_menu_id" parent="others_menu_id" action="all_persones_action_id"/>
+
+  </data>
+</odoo>

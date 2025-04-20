@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="kashf_list_id">
+      <field name="name">Kashfs_List</field>
+      <field name="model">mdl_kashf</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="fld_sonum"/>
+            <field name="fld_sequence"/>
+            <field name="name"/>
+            <field name="fld_info"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="kashf_form_id">
+		<field name="name">Kashfs_Form</field>
+		<field name="model">mdl_kashf</field>
+		<field name="arch" type="xml">
+			<form>
+                <div class="oe_title">
+                    <h1>
+                        <field name="fld_sequence" readonly="1"/>
+                    </h1>
+                </div>
+              <group>
+                  <field name="name"/>
+                  <field name="fld_info"/>
+                  <field name="fld_persons_ids">
+                      <tree>
+                          <field name="fld_sonum"/>
+                          <field name="name"/>
+                          <field name="fld_zones_id"/>
+                          <field name="fld_address"/>
+                      </tree>
+                  </field>
+              </group>
+			</form>
+		</field>
+	</record>
+
+
+    <record model="ir.actions.act_window" id="kashf_action_id">
+      <field name="name">Kashfs_Action</field>
+      <field name="res_model">mdl_kashf</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Kashfs" id="kashf_menu_root_id"/>
+    <menuitem name="Kashfs" id="kashf_menu_id" parent="kashf_menu_root_id"/>
+    <menuitem name="All Kashfs" id="kashf_menu_id2" parent="kashf_menu_id" action="kashf_action_id"/>
+
+    <record id="kashf_sqnce_id" model="ir.sequence">
+        <field name="name">Any String</field>
+        <field name="code">kashf_sqnce_code</field>
+        <field name="prefix">kf</field>
+        <field name="padding">5</field>
+    </record>
+  </data>
+</odoo>

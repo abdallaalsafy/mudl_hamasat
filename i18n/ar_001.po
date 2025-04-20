@@ -1,0 +1,538 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mudl_hamasat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-24 04:49+0000\n"
+"PO-Revision-Date: 2023-06-24 04:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mudl_hamasat
+#: model:ir.actions.report,print_report_name:mudl_hamasat.action_id
+msgid "'File Name'"
+msgstr "ملف بإسم"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_social__ab
+msgid "Absolute"
+msgstr "مطلق"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_address
+msgid "Address"
+msgstr "العنوان"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_adj_id
+msgid "Adjective"
+msgstr "صفته"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.sones_adj_menu_id
+#: model:ir.ui.menu,name:mudl_hamasat.sones_adj_menu_root_id
+msgid "Adjectives"
+msgstr "صفات القرابة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_age
+msgid "Age"
+msgstr "العمر"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.sones_adj_menu_id2
+msgid "All Adjectives"
+msgstr "كل صفات القرابة"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.kashf_menu_id2
+msgid "All Kashfs"
+msgstr "كل الكشوفات"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.all_parents_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.all_parents_menu_id
+msgid "All Parents"
+msgstr "كل المستفيدين"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.all_persones_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.all_persones_menu_id
+msgid "All Persones"
+msgstr "كل المستفيدين مع عوائلهم"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.all_sones_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.all_sones_menu_id
+msgid "All Sones"
+msgstr "عوائل المستفيدين"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.zones_menu_id2
+msgid "All Zones"
+msgstr "كل المناطق"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.archive_parents_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.archive_parents_menu_id
+msgid "Archive Parents"
+msgstr "المستفيدين المحذوفين"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_social__bc
+msgid "Bachelor"
+msgstr "عازب"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_birth
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: mudl_hamasat
+#: model_terms:ir.ui.view,arch_db:mudl_hamasat.wzrd_degree_form_id
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_card_back
+msgid "Card Nation Back"
+msgstr "ظهر البطاقة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_card_front
+msgid "Card Nation Front"
+msgstr "واجهة البطاقة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_code_nation
+msgid "Code Nation"
+msgstr "الرقم القومي"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_sones
+msgid "Count Of Sones"
+msgstr "عدد من يعول"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__create_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__create_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__create_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__create_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__create_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__create_uid
+msgid "Created by"
+msgstr "أنشئه"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__create_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__create_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__create_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__create_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__create_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__create_date
+msgid "Created on"
+msgstr "تاريخ الأنشاء"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_degree
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__fld_degree
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__display_name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__display_name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__display_name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__display_name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__display_name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__display_name
+msgid "Display Name"
+msgstr "الأسم"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_card_name_back
+msgid "Fld Card Name Back"
+msgstr "إسم ظهر البطاقة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_card_name_front
+msgid "Fld Card Name Front"
+msgstr "إسم واجهة البطاقة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_image
+msgid "Fld Image"
+msgstr "الصورة الشخصية"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__fld_persone_id
+msgid "Fld Persone"
+msgstr "المنتفعين"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_gender
+msgid "Gender"
+msgstr "النوع"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_health__hn
+msgid "Handicapped"
+msgstr "معاق"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_health
+msgid "Health"
+msgstr "الحالة الصحية"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_houseband
+msgid "Houseband"
+msgstr "إسم الزوج"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__id
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__id
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__id
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__id
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__id
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_health_info
+msgid "Info Of Health"
+msgstr "تفاصيل الحالة الصحية"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__name
+msgid "Kashf Name"
+msgstr "إسم الكشف"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.kashf_menu_id
+#: model:ir.ui.menu,name:mudl_hamasat.kashf_menu_root_id
+msgid "Kashfs"
+msgstr "الكشوفات"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_kashfs_ids
+msgid "Kashfs Of Person"
+msgstr "كشوفات المنتفع"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.kashf_action_id
+msgid "Kashfs_Action"
+msgstr "شاشة الكشوفات"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf____last_update
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files____last_update
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones____last_update
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj____last_update
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones____last_update
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__write_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__write_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__write_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__write_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__write_uid
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__write_uid
+msgid "Last Updated by"
+msgstr "حدث بواسطة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__write_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__write_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__write_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__write_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__write_date
+#: model:ir.model.fields,field_description:mudl_hamasat.field_wzrd_degree__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_degree__c
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__wzrd_degree__fld_degree__c
+msgid "Low"
+msgstr "الدرجة الثالثة"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.low_parents_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.low_parents_menu_id
+msgid "Low Parents"
+msgstr "مستفيدين درجة ثالثة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_social__mr
+msgid "Married"
+msgstr "متزوج"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_degree__b
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__wzrd_degree__fld_degree__b
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.medium_parents_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.medium_parents_menu_id2
+msgid "Medium Parents"
+msgstr "مستفيدين درجة ثانية"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__name
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__name
+msgid "Name"
+msgstr "الأسم"
+
+#. module: mudl_hamasat
+#: code:addons/mudl_hamasat/models/kashf.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.no_degree_parents_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.no_degree_parents_menu_id
+msgid "No Degree Parents"
+msgstr "مستفيدين غير مصنفين"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: mudl_hamasat
+#: model_terms:ir.ui.view,arch_db:mudl_hamasat.wzrd_degree_form_id
+msgid "OK"
+msgstr "موافق"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.others_menu_id
+msgid "Others"
+msgstr "آخرى"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_persone_id
+msgid "Parent Name"
+msgstr "إسم العائل"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.parents_menu_id
+msgid "Parents"
+msgstr "المستفيدين"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.persones_menu_root_id
+msgid "Persones"
+msgstr "المسجلين"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__fld_persons_ids
+msgid "Persones In Kashf"
+msgstr "منتفعي الكشف"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_phones
+msgid "Phones"
+msgstr "الهاتف"
+
+#. module: mudl_hamasat
+#: model:ir.actions.report,name:mudl_hamasat.action_id
+msgid "Print Cards"
+msgstr "طباعة البطاقات"
+
+#. module: mudl_hamasat
+#: model_terms:ir.ui.view,arch_db:mudl_hamasat.persones_list_id
+msgid "Recorded Sones"
+msgstr "العوائل المسجلة"
+
+#. module: mudl_hamasat
+#: model:ir.actions.server,name:mudl_hamasat.persones_action_server_id
+msgid "Select"
+msgstr "تم الأختيار"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_selected
+msgid "Selected"
+msgstr "مختار"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__fld_sequence
+msgid "Sequence"
+msgstr "الكود"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_health__sc
+msgid "Sick"
+msgstr "مريض"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__fld_sonum
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_sonum
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_sones_adj__fld_sonum
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__fld_sonum
+msgid "SoNum"
+msgstr "مسلسل"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_social
+msgid "Social"
+msgstr "الحالة الأجتماعية"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_sones_ids
+msgid "Sones Data"
+msgstr "بيانات المعولين"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.sones_adj_action_id
+msgid "Sones_Adj_Action"
+msgstr "شاشة صفة القرابة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_degree__a
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__wzrd_degree__fld_degree__a
+msgid "Strong"
+msgstr "قوي"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.strong_parents_action_id
+#: model:ir.ui.menu,name:mudl_hamasat.strong_parents_menu_id
+msgid "Strong Parents"
+msgstr "المستفيدين درجة أولى"
+
+#. module: mudl_hamasat
+#: model:ir.model.constraint,message:mudl_hamasat.constraint_mdl_sones_adj_unique_sones_adj
+msgid "The Adjective Is Existe Before"
+msgstr "صفة القرابة مسجلة من قبل"
+
+#. module: mudl_hamasat
+#: model:ir.model.constraint,message:mudl_hamasat.constraint_mdl_persones_unique_persons_code
+msgid "The Code Nation Of Person Is Existe Before"
+msgstr "الرقم القومي للعائل مسجل من قبل"
+
+#. module: mudl_hamasat
+#: code:addons/mudl_hamasat/models/persones.py:0
+#, python-format
+msgid "The Code Nation Of Son Is Not Correct"
+msgstr "الرقم القومي للمعول مسجل من قبل"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_files_ids
+msgid "The Files"
+msgstr "الملفات"
+
+#. module: mudl_hamasat
+#: model:ir.model.constraint,message:mudl_hamasat.constraint_mdl_kashf_unique_kashf
+msgid "The Name Of Kashf Is Exite Before"
+msgstr "إسم الكشف مسجل من قبل"
+
+#. module: mudl_hamasat
+#: model:ir.model.constraint,message:mudl_hamasat.constraint_mdl_persones_unique_persones
+msgid "The Persone Is Existe Before"
+msgstr "إسم المنتفع مسجل من قبل"
+
+#. module: mudl_hamasat
+#: model:ir.model.constraint,message:mudl_hamasat.constraint_mdl_zones_unique_zones
+msgid "The Zone Is Exite Before"
+msgstr "إسم المنطقة مسجل من قبل"
+
+#. module: mudl_hamasat
+#: model:ir.actions.server,name:mudl_hamasat.persones_action_server_id2
+msgid "UnSelect"
+msgstr "غير مختار"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_person_files__fld_file
+msgid "Upload File"
+msgstr "رفع ملف"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields.selection,name:mudl_hamasat.selection__mdl_persones__fld_social__wd
+msgid "Widower"
+msgstr "أرمل"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.wzrd_degree_action_id
+msgid "Wizard Degree"
+msgstr "تحرير درجة المستفيدين"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__name
+msgid "ZnName"
+msgstr "إسم المنطقة"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_persones__fld_zones_id
+msgid "Zone Name"
+msgstr "إسم المنطقة"
+
+#. module: mudl_hamasat
+#: model:ir.ui.menu,name:mudl_hamasat.zones_menu_id
+#: model:ir.ui.menu,name:mudl_hamasat.zones_menu_root_id
+msgid "Zones"
+msgstr "المناطق"
+
+#. module: mudl_hamasat
+#: model:ir.actions.act_window,name:mudl_hamasat.zones_action_id
+msgid "Zones_Action"
+msgstr "شاشة المناطق"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_kashf__fld_info
+msgid "description Of Kashf"
+msgstr "تفاصيل الكشف"
+
+#. module: mudl_hamasat
+#: model:ir.model.fields,field_description:mudl_hamasat.field_mdl_zones__fld_info
+msgid "description Of Zones"
+msgstr "تفاصيل المنطقة"
+
+#. module: mudl_hamasat
+#: model:ir.model,name:mudl_hamasat.model_mdl_kashf
+msgid "mdl_kashf"
+msgstr "جدول الكشوفات"
+
+#. module: mudl_hamasat
+#: model:ir.model,name:mudl_hamasat.model_mdl_person_files
+msgid "mdl_person_files"
+msgstr "جدول الملفات"
+
+#. module: mudl_hamasat
+#: model:ir.model,name:mudl_hamasat.model_mdl_persones
+msgid "mdl_persones"
+msgstr "جدول المنتفعين"
+
+#. module: mudl_hamasat
+#: model:ir.model,name:mudl_hamasat.model_mdl_sones_adj
+msgid "mdl_sones_adj"
+msgstr "جدول صفات القرابة"
+
+#. module: mudl_hamasat
+#: model:ir.model,name:mudl_hamasat.model_mdl_zones
+msgid "mdl_zones"
+msgstr "جدول المناطق"
+
+#. module: mudl_hamasat
+#: model:ir.model,name:mudl_hamasat.model_wzrd_degree
+msgid "wzrd_degree"
+msgstr "تحرير درجة المستفيدين"

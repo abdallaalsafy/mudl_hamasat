@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="zones_list_id">
+      <field name="name">Zones_List</field>
+      <field name="model">mdl_zones</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="fld_sonum"/>
+          <field name="name"/>
+          <field name="fld_info"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="zones_form_id">
+		<field name="name">Zones_Form</field>
+		<field name="model">mdl_zones</field>
+		<field name="arch" type="xml">
+			<form>
+              <group>
+                <field name="name"/>
+                <field name="fld_info"/>
+              </group>
+			</form>
+		</field>
+	</record>
+
+
+    <record model="ir.actions.act_window" id="zones_action_id">
+      <field name="name">Zones_Action</field>
+      <field name="res_model">mdl_zones</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Zones" id="zones_menu_root_id"/>
+    <menuitem name="Zones" id="zones_menu_id" parent="zones_menu_root_id"/>
+    <menuitem name="All Zones" id="zones_menu_id2" parent="zones_menu_id" action="zones_action_id"/>
+
+
+  </data>
+</odoo>

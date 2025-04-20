@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mdl_zones,mdl_zones,model_mdl_zones,base.group_user,1,1,1,1
+access_mdl_persones,mdl_persones,model_mdl_persones,base.group_user,1,1,1,1
+access_mdl_sones_adj,mdl_sones_adj,model_mdl_sones_adj,base.group_user,1,1,1,1
+access_mdl_person_files,mdl_person_files,model_mdl_person_files,base.group_user,1,1,1,1
+access_mdl_kashf,mdl_kashf,model_mdl_kashf,base.group_user,1,1,1,1

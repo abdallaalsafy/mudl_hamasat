@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="1">
+          <record id="sones_adj_id1" model="mdl_sones_adj">
+            <field name="name">parent</field>
+          </record>
+
+          <record id="sones_adj_id2" model="mdl_sones_adj">
+            <field name="name">son</field>
+          </record>
+
+          <record id="sones_adj_id3" model="mdl_sones_adj">
+            <field name="name">housband</field>
+          </record>
+
+          <record id="sones_adj_id4" model="mdl_sones_adj">
+            <field name="name">brother</field>
+          </record>
+    </data>
+</odoo>
