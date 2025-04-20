@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from odoo.public_class import MainClass
+from ..public_class import MainClass
 
 
 class cls_zones(models.Model):

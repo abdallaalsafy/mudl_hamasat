@@ -1,5 +1,5 @@
 from odoo import models, fields, api, _
-from odoo.public_class import MainClass
+from ..public_class import MainClass
 
 
 class cls_sones_adj(models.Model):
